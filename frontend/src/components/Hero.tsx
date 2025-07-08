@@ -1,6 +1,8 @@
 import React from 'react';
 import { ArrowDown, Github, Linkedin, Mail } from 'lucide-react';
 import { TypeAnimation } from 'react-type-animation';
+import tilyImage from '../assets/tily.jpg';
+
 
 const Hero: React.FC = () => {
   const scrollToSection = (sectionId: string) => {
@@ -101,7 +103,7 @@ const Hero: React.FC = () => {
 
           {/* Profile Image (no animation) */}
           <img
-            src="/tily.jpg"
+            src={tilyImage}
             alt="Profile"
             className="w-60 h-60 sm:w-64 sm:h-64 md:w-72 md:h-72 rounded-full border-4 border-transparent z-20 object-cover shadow-2xl"
           />

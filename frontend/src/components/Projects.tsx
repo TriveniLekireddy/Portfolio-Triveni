@@ -1,5 +1,7 @@
 import React from 'react';
 import { ExternalLink, Github, Smartphone, Globe } from 'lucide-react';
+import FrontImage from '../assets/front.png';
+
 
 const Projects: React.FC = () => {
   const projects = [
@@ -36,7 +38,7 @@ const Projects: React.FC = () => {
     {
       title: 'Portfolio',
       description: 'An interactive and responsive portfolio designed to highlight my skills, projects, and professional journey. Developed with React, Tailwind CSS, and Framer Motion for a sleek user experience.',
-      image: '/front.png',
+      image: FrontImage,
       tech: ['Typescript', 'Tailwind CSS'],
       liveUrl: 'https://stress-prediction-f1zf.onrender.com',
       githubUrl: 'https://github.com/TriveniLekireddy/Student-Stress-Prediction-and-Health-Risk-Detection-Triveni',

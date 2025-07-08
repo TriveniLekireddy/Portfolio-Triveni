@@ -1,6 +1,8 @@
 import React from "react";
 import { motion } from "framer-motion";
 import { User, MapPin } from 'lucide-react';
+import ResumePDF from '../assets/Resume.pdf';
+
 
 const About: React.FC = () => {
   return (
@@ -59,7 +61,7 @@ const About: React.FC = () => {
         {/* Resume Button */}
         <div className="mt-8 flex justify-center">
           <a
-            href="/Resume.pdf"
+            href={ResumePDF}
             download
             className="px-6 py-3 bg-blue-600 hover:bg-blue-700 text-white font-semibold rounded-lg shadow-md transition-transform transform hover:scale-105"
           >
