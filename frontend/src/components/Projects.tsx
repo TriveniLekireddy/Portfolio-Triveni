@@ -2,7 +2,6 @@ import React from 'react';
 import { ExternalLink, Github, Smartphone, Globe } from 'lucide-react';
 import FrontImage from '../assets/front.png';
 
-
 const Projects: React.FC = () => {
   const projects = [
     {
@@ -27,9 +26,9 @@ const Projects: React.FC = () => {
     },
     {
       title: 'Student Stress Prediction and Health Risk Detection',
-     description: 'A machine learning app that analyzes grades, peer relations, and activities to predict student stress and health risks.',
+      description: 'A machine learning app that analyzes grades, peer relations, and activities to predict student stress and health risks. This app helps educational institutions intervene earlier to reduce mental health issues.',
       image: 'https://incontact.com.sg/wp-content/uploads/2021/05/Student-Stress.jpg',
-      tech: ['Python', 'Python Libraries', 'React', 'Tailwind CSS'],
+      tech: ['Python', 'Scikit-learn', 'React', 'Tailwind CSS'],
       liveUrl: 'https://stress-prediction-f1zf.onrender.com',
       githubUrl: 'https://github.com/TriveniLekireddy/Student-Stress-Prediction-and-Health-Risk-Detection-Triveni',
       category: 'Machine Learning Application',
@@ -59,12 +58,12 @@ const Projects: React.FC = () => {
             A showcase of my recent work and personal projects
           </p>
         </div>
-        
+
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
           {projects.map((project, index) => (
             <div
               key={index}
-              className="bg-white dark:bg-gray-800 rounded-xl shadow-lg hover:shadow-2xl transform hover:scale-105 transition-all duration-300 overflow-hidden group"
+              className="bg-white dark:bg-gray-800 rounded-xl shadow-lg hover:shadow-2xl transform hover:scale-105 transition-all duration-300 overflow-hidden flex flex-col group"
             >
               <div className="relative overflow-hidden">
                 <img
@@ -79,15 +78,17 @@ const Projects: React.FC = () => {
                   </span>
                 </div>
               </div>
-              
-              <div className="p-6">
+
+              <div className="p-6 flex flex-col flex-grow">
                 <h3 className="text-xl font-bold text-gray-800 dark:text-white mb-3">
                   {project.title}
                 </h3>
-                <p className="text-gray-600 dark:text-gray-300 mb-4 leading-relaxed">
+
+                {/* Scrollable description with modern scrollbar */}
+                <div className="text-gray-600 dark:text-gray-300 mb-4 leading-relaxed overflow-y-hidden group-hover:overflow-y-auto max-h-24 scrollbar-thin scrollbar-thumb-blue-500 scrollbar-track-blue-100 dark:scrollbar-thumb-blue-400 dark:scrollbar-track-gray-700">
                   {project.description}
-                </p>
-                
+                </div>
+
                 <div className="flex flex-wrap gap-2 mb-6">
                   {project.tech.map((tech, techIndex) => (
                     <span
@@ -98,8 +99,9 @@ const Projects: React.FC = () => {
                     </span>
                   ))}
                 </div>
-                
-                <div className="flex space-x-4">
+
+                {/* Buttons aligned at bottom */}
+                <div className="mt-auto flex space-x-4">
                   <a
                     href={project.liveUrl}
                     target="_blank"
